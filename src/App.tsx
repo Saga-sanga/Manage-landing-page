@@ -3,15 +3,20 @@ import logo from './assets/logo.svg';
 import logoDark from './assets/logo-dark.svg';
 import hamburger from './assets/icon-hamburger.svg';
 import close from './assets/icon-close.svg';
-import bgDesktop from './assets/bg-simplify-section-desktop.svg';
-import bgMobile from './assets/bg-simplify-section-mobile.svg';
-import bgTabletPattern from './assets/bg-tablet-pattern.svg';
+// import bgDesktop from './assets/bg-simplify-section-desktop.svg';
+// import bgMobile from './assets/bg-simplify-section-mobile.svg';
+// import bgTabletPattern from './assets/bg-tablet-pattern.svg';
 import illustrationIntro from './assets/illustration-intro.svg';
 import facebookLogo from './assets/icon-facebook.svg';
 import youtubeLogo from './assets/icon-youtube.svg';
 import twitterLogo from './assets/icon-twitter.svg';
 import pinterestLogo from './assets/icon-pinterest.svg';
 import instagramLogo from './assets/icon-instagram.svg';
+
+import anishaAvatar from './assets/avatar-anisha.png';
+import aliAvatar from './assets/avatar-ali.png';
+import richardAvatar from './assets/avatar-richard.png';
+import shanaiAvatar from './assets/avatar-shanai.png';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -89,35 +94,49 @@ function App() {
         </div>
       </section>
 
-      <div>
-        <h3>What they’ve said</h3>
-        <div>
-          Anisha Li
-          “Manage has supercharged our team’s workflow. The ability to maintain
-          visibility on larger milestones at all times keeps everyone motivated.”
+      <div className='flex flex-col items-center'>
+        <h3 className='font-bold text-3xl text-center'>What they’ve said</h3>
+        <div className='flex overflow-hidden text-center'>
+          <div className='relative bg-very-light-gray flex flex-col items-center'>
+            <img className='absolute' width={64} src={anishaAvatar} alt="Anisha's Avatar Image" />
+            <h3 className='font-bold'>Anisha Li</h3>
+            <p className='text-dark-grayish-blue text-sm'>
+              “Manage has supercharged our team’s workflow. The ability to maintain
+              visibility on larger milestones at all times keeps everyone motivated.”
+            </p>
+          </div>
+          <div className='relative bg-very-light-gray flex flex-col items-center'>
+            <img className='absolute' width={64} src={aliAvatar} alt="Ali's Avatar Image" />
+            <h3 className='font-bold'>Ali Bravo</h3>
+            <p className='text-dark-grayish-blue text-sm'>
+              “We have been able to cancel so many other subscriptions since using
+              Manage. There is no more cross-channel confusion and everyone is much
+              more focused.”
+            </p>
+          </div>
+          <div className='relative bg-very-light-gray flex flex-col items-center'>
+            <img className='absolute' width={64} src={richardAvatar} alt="Richard's Avatar Image" />
+            <h3 className='font-bold'>Richard Watts</h3>
+            <p className='text-dark-grayish-blue text-sm'>
+              “Manage allows us to provide structure and process. It keeps us organized
+              and focused. I can’t stop recommending them to everyone I talk to!”
+            </p>
+          </div>
+          <div className='relative bg-very-light-gray flex flex-col items-center'>
+            <img className='absolute' width={64} src={shanaiAvatar} alt="Shanai's Avatar Image" />
+            <h3 className='font-bold'>Shanai Gough</h3>
+            <p className='text-dark-grayish-blue text-sm'>
+              “Their software allows us to track, manage and collaborate on our projects
+              from anywhere. It keeps the whole team in-sync without being intrusive.”
+            </p>
+          </div>
         </div>
-        <div>
-          Ali Bravo
-          “We have been able to cancel so many other subscriptions since using
-          Manage. There is no more cross-channel confusion and everyone is much
-          more focused.”
-        </div>
-        <div>
-          Richard Watts
-          “Manage allows us to provide structure and process. It keeps us organized
-          and focused. I can’t stop recommending them to everyone I talk to!”
-        </div>
-        <div>
-          Shanai Gough
-          “Their software allows us to track, manage and collaborate on our projects
-          from anywhere. It keeps the whole team in-sync without being intrusive.”
-          Get Started
-        </div>
+        <a className='text-very-light-gray font-medium text-xs bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
       </div>
 
-      <div className='bg-[url(./assets/bg-simplify-section-mobile.svg)] bg-no-repeat bg-contain bg-bright-red'>
-        <h1>Simplify how your team works today.</h1>
-        <a href="">Get Started</a>
+      <div className='flex flex-col gap-8 items-center content-center px-8 py-20 bg-[url(./assets/bg-simplify-section-mobile.svg)] bg-left bg-no-repeat bg-auto bg-bright-red'>
+        <h1 className='text-very-light-gray text-4xl text-center font-bold leading-tight'>Simplify how your team works today.</h1>
+        <a className='text-bright-red font-bold text-xs bg-very-light-gray px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
       </div>
 
       <footer className='bg-very-dark-blue text-very-light-gray'>
