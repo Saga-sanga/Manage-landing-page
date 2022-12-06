@@ -139,23 +139,26 @@ function App() {
         <a className='text-bright-red font-bold text-xs bg-very-light-gray px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
       </div>
 
-      <footer className='bg-very-dark-blue text-very-light-gray'>
-        <div><input type="text" placeholder='Updates in your inbox…'/> <button>Go</button></div>
-        <div>
+      <footer className='bg-very-dark-blue text-very-light-gray flex flex-col items-center gap-12 py-10'>
+        <div className='flex gap-3'>
+          <input className='px-7 py-2 rounded-full placeholder:text-sm' type="text" placeholder='Updates in your inbox…'/>
+          <button className='rounded-full px-7 py-2 bg-bright-red text-very-light-gray text-xs font-bold'>GO</button>
+        </div>
+        <div className='w-full flex justify-around text-sm'>
           <ul>
-            <li>Home</li>
-            <li>Pricing</li>
-            <li>Products</li>
-            <li>About Us</li> 
+            <li className='py-2'>Home</li>
+            <li className='py-2'>Pricing</li>
+            <li className='py-2'>Products</li>
+            <li className='py-2'>About Us</li> 
           </ul>
           <ul>
-            <li>Careers</li>
-            <li>Community</li>
-            <li>Privacy Policy</li>
+            <li className='py-2'>Careers</li>
+            <li className='py-2'>Community</li>
+            <li className='py-2'>Privacy Policy</li>
           </ul>
         </div>
-        <div>
-          <div className='flex justify-between'>
+        <div className='w-full flex flex-col items-center gap-12'>
+          <div className='w-full flex justify-evenly'>
             <img width={32} src={facebookLogo} alt="facebook logo" />
             <img width={32} src={youtubeLogo} alt="youtube logo" />
             <img width={32} src={twitterLogo} alt="twitter logo" />
@@ -164,7 +167,7 @@ function App() {
           </div>
           <div><img className='fill-very-light-gray' src={logoDark} alt="Manage Logo" /></div>
         </div>
-        <div>Copyright 2020. All Rights Reserved</div>
+        <div className='text-xs text-dark-grayish-blue'>Copyright 2020. All Rights Reserved</div>
       </footer>
 
       <div className="attribution">
