@@ -23,11 +23,9 @@ function App() {
 
   return (
     <div className="text-dark-blue">
-      <div className='bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-cover'>
-        <nav className='flex justify-between'>
-          <div>
-            <img src={logo} alt="Manage Logo" />
-          </div>
+      <div className='bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-cover bg-[3rem_-5rem] px-4 pb-4'>
+        <nav className='flex justify-between items-center px-2 py-10'>
+          <img className='w-28' src={logo} alt="Manage Logo" />
           <ul className='hidden md:flex'>
             <li>Pricing</li>
             <li>Product</li>
@@ -43,19 +41,19 @@ function App() {
       </div>
 
       <section >
-        <article className='flex flex-col items-center text-center bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-cover'>
-          <div>
+        <article className='flex flex-col items-center text-center bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-[length:85%] bg-[430%_25%] px-7 gap-24'>
+          <div className='flex flex-col items-center gap-2'>
             <h1 className='text-4xl font-bold leading-tight'>Bring everyone together to build better products.</h1>
-            <p className='text-dark-grayish-blue font-normal'>
+            <p className='text-dark-grayish-blue font-normal leading-relaxed'>
               Manage makes it simple for software teams to plan day-to-day
               tasks while keeping the larger team goals in view.
             </p>
-            <a className='text-very-light-gray font-medium text-xs bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
+            <a className='text-very-light-gray font-medium text-xs mt-6 bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
           </div>
 
-          <div>
-            <h2 className='text-3xl font-bold leading-tight'>What’s different about Manage?</h2>
-            <p className='text-dark-grayish-blue text-sm'>
+          <div className='flex flex-col items-center gap-4'>
+            <h2 className='text-3xl font-bold leading-normal'>What’s different about Manage?</h2>
+            <p className='text-dark-grayish-blue text-sm leading-relaxed'>
               Manage provides all the functionality your team needs, without
               the complexity. Our software is tailor-made for modern digital
               product teams.
@@ -63,72 +61,80 @@ function App() {
           </div>
         </article>
 
-        <div>
-          <h3 className='font-bold'>
-            <span>01</span>
-            Track company-wide progress
-          </h3>
-          <p className='text-dark-grayish-blue text-sm'>
-            See how your day-to-day tasks fit into the wider vision. Go from
-            tracking progress at the milestone level all the way done to the
-            smallest of details. Never lose sight of the bigger picture again.
-          </p>
-          <h3 className='font-bold'>
-            <span>02</span>
-            Advanced built-in reports
-          </h3>
-          <p className='text-dark-grayish-blue text-sm'>
-            Set internal delivery estimates and track progress toward company
-            goals. Our customisable dashboard helps you build out the reports
-            you need to keep key stakeholders informed.
-          </p>
-          <h3 className='font-bold'>
-            <span>03</span>
-            Everything you need in one place
-          </h3>
-          <p className='text-dark-grayish-blue text-sm'>
-            Stop jumping from one service to another to communicate, store files,
-            track tasks and share documents. Manage offers an all-in-one team
-            productivity solution.
-          </p>
+        <div className='my-12'>
+          <div className='ml-4'>
+            <h3 className='font-bold flex gap-4 items-center bg-very-pale-red relative z-10'>
+              <span className='before:content-[""] before:z-[-1] before:absolute before:top-0 before:left-[-2rem] before:w-12 before:h-full before:bg-white relative text-very-light-gray bg-bright-red px-6 py-2 rounded-full'>01</span>
+              Track company-wide progress
+            </h3>
+            <p className='text-dark-grayish-blue text-sm leading-relaxed'>
+              See how your day-to-day tasks fit into the wider vision. Go from
+              tracking progress at the milestone level all the way done to the
+              smallest of details. Never lose sight of the bigger picture again.
+            </p>
+          </div>
+          <div className='ml-4'>
+            <h3 className='font-bold flex gap-4 items-center bg-very-pale-red relative z-10'>
+              <span className='before:content-[""] before:z-[-1] before:absolute before:top-0 before:left-[-2rem] before:w-12 before:h-full before:bg-white relative text-very-light-gray bg-bright-red px-6 py-2 rounded-full'>02</span>
+              Advanced built-in reports
+            </h3>
+            <p className='text-dark-grayish-blue text-sm leading-relaxed'>
+              Set internal delivery estimates and track progress toward company
+              goals. Our customisable dashboard helps you build out the reports
+              you need to keep key stakeholders informed.
+            </p>
+          </div>
+          <div className='ml-4'>
+            <h3 className='font-bold flex gap-4 items-center bg-very-pale-red relative z-10'>
+              <span className='before:content-[""] before:z-[-1] before:absolute before:top-0 before:left-[-2rem] before:w-12 before:h-full before:bg-white relative text-very-light-gray bg-bright-red px-6 py-2 rounded-full'>03</span>
+              Everything you need in one place
+            </h3>
+            <p className='text-dark-grayish-blue text-sm leading-relaxed'>
+              Stop jumping from one service to another to communicate, store files,
+              track tasks and share documents. Manage offers an all-in-one team
+              productivity solution.
+            </p>
+          </div>
         </div>
       </section>
 
       <div className='flex flex-col items-center'>
         <h3 className='font-bold text-3xl text-center'>What they’ve said</h3>
-        <div className='flex overflow-hidden text-center'>
-          <div className='relative bg-very-light-gray flex flex-col items-center'>
-            <img className='absolute' width={64} src={anishaAvatar} alt="Anisha's Avatar Image" />
-            <h3 className='font-bold'>Anisha Li</h3>
-            <p className='text-dark-grayish-blue text-sm'>
-              “Manage has supercharged our team’s workflow. The ability to maintain
-              visibility on larger milestones at all times keeps everyone motivated.”
-            </p>
-          </div>
-          <div className='relative bg-very-light-gray flex flex-col items-center'>
-            <img className='absolute' width={64} src={aliAvatar} alt="Ali's Avatar Image" />
-            <h3 className='font-bold'>Ali Bravo</h3>
-            <p className='text-dark-grayish-blue text-sm'>
-              “We have been able to cancel so many other subscriptions since using
-              Manage. There is no more cross-channel confusion and everyone is much
-              more focused.”
-            </p>
-          </div>
-          <div className='relative bg-very-light-gray flex flex-col items-center'>
-            <img className='absolute' width={64} src={richardAvatar} alt="Richard's Avatar Image" />
-            <h3 className='font-bold'>Richard Watts</h3>
-            <p className='text-dark-grayish-blue text-sm'>
-              “Manage allows us to provide structure and process. It keeps us organized
-              and focused. I can’t stop recommending them to everyone I talk to!”
-            </p>
-          </div>
-          <div className='relative bg-very-light-gray flex flex-col items-center'>
-            <img className='absolute' width={64} src={shanaiAvatar} alt="Shanai's Avatar Image" />
-            <h3 className='font-bold'>Shanai Gough</h3>
-            <p className='text-dark-grayish-blue text-sm'>
-              “Their software allows us to track, manage and collaborate on our projects
-              from anywhere. It keeps the whole team in-sync without being intrusive.”
-            </p>
+        <div className='overflow-hidden'>
+          <div className='flex text-center'>
+            <div className='relative w-full bg-very-light-gray flex flex-col items-center'>
+              <img className='absolute' width={64} src={anishaAvatar} alt="Anisha's Avatar Image" />
+              <h3 className='font-bold'>Anisha Li</h3>
+              <p className='text-dark-grayish-blue text-sm'>
+                “Manage has supercharged our team’s workflow. The ability to maintain
+                visibility on larger milestones at all times keeps everyone motivated.”
+              </p>
+            </div>
+            <div className='relative w-full bg-very-light-gray flex flex-col items-center'>
+              <img className='absolute' width={64} src={aliAvatar} alt="Ali's Avatar Image" />
+              <h3 className='font-bold'>Ali Bravo</h3>
+              <p className='text-dark-grayish-blue text-sm'>
+                “We have been able to cancel so many other subscriptions since using
+                Manage. There is no more cross-channel confusion and everyone is much
+                more focused.”
+              </p>
+            </div>
+            <div className='relative w-full bg-very-light-gray flex flex-col items-center'>
+              <img className='absolute' width={64} src={richardAvatar} alt="Richard's Avatar Image" />
+              <h3 className='font-bold'>Richard Watts</h3>
+              <p className='text-dark-grayish-blue text-sm'>
+                “Manage allows us to provide structure and process. It keeps us organized
+                and focused. I can’t stop recommending them to everyone I talk to!”
+              </p>
+            </div>
+            <div className='relative w-full bg-very-light-gray flex flex-col items-center'>
+              <img className='absolute' width={64} src={shanaiAvatar} alt="Shanai's Avatar Image" />
+              <h3 className='font-bold'>Shanai Gough</h3>
+              <p className='text-dark-grayish-blue text-sm'>
+                “Their software allows us to track, manage and collaborate on our projects
+                from anywhere. It keeps the whole team in-sync without being intrusive.”
+              </p>
+            </div>
           </div>
         </div>
         <a className='text-very-light-gray font-medium text-xs bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
@@ -141,20 +147,20 @@ function App() {
 
       <footer className='bg-very-dark-blue text-very-light-gray flex flex-col items-center gap-12 py-10'>
         <div className='flex gap-3'>
-          <input className='px-7 py-2 rounded-full placeholder:text-sm' type="text" placeholder='Updates in your inbox…'/>
+          <input className='px-7 py-2 rounded-full placeholder:text-sm text-dark-blue' type="text" placeholder='Updates in your inbox…'/>
           <button className='rounded-full px-7 py-2 bg-bright-red text-very-light-gray text-xs font-bold'>GO</button>
         </div>
         <div className='w-full flex justify-around text-sm'>
           <ul>
-            <li className='py-2'>Home</li>
-            <li className='py-2'>Pricing</li>
-            <li className='py-2'>Products</li>
-            <li className='py-2'>About Us</li> 
+            <li className='py-2'><a href="">Home</a></li>
+            <li className='py-2'><a href="">Pricing</a></li>
+            <li className='py-2'><a href="">Products</a></li>
+            <li className='py-2'><a href="">About Us</a></li> 
           </ul>
           <ul>
-            <li className='py-2'>Careers</li>
-            <li className='py-2'>Community</li>
-            <li className='py-2'>Privacy Policy</li>
+            <li className='py-2'><a href="">Careers</a></li>
+            <li className='py-2'><a href="">Community</a></li>
+            <li className='py-2'><a href="">Privacy Policy</a></li>
           </ul>
         </div>
         <div className='w-full flex flex-col items-center gap-12'>
