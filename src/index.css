@@ -8,8 +8,12 @@
   }
 }
 
-.carousel::-webkit-scrollbar {
+.scrollWrapper::-webkit-scrollbar {
   display: none;
+}
+
+.scrollWrapper {
+  -webkit-overflow-scrolling: touch;
 }
 
 .attribution { font-size: 11px; text-align: center; }

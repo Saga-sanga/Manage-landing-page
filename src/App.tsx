@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import logo from './assets/logo.svg';
 import logoDark from './assets/logo-dark.svg';
 import hamburger from './assets/icon-hamburger.svg';
@@ -12,14 +12,34 @@ import youtubeLogo from './assets/icon-youtube.svg';
 import twitterLogo from './assets/icon-twitter.svg';
 import pinterestLogo from './assets/icon-pinterest.svg';
 import instagramLogo from './assets/icon-instagram.svg';
+import chevronLeft from './assets/chevron-left.svg';
+import chevronRight from './assets/chevron-right.svg';
 
 import anishaAvatar from './assets/avatar-anisha.png';
 import aliAvatar from './assets/avatar-ali.png';
 import richardAvatar from './assets/avatar-richard.png';
 import shanaiAvatar from './assets/avatar-shanai.png';
 
-function App() {
-  const [count, setCount] = useState(0)
+function App() { 
+  // const scrollWrapper = document.querySelector('.scrollWrapper');
+
+  // const rectWidth = scrollWrapper?.getBoundingClientRect().width;
+
+  // const [widthScroll, setWidth] = useState(rectWidth);
+  // // document.querySelector(".carousel")?.style.width = scrollWrapperWidth * 4;
+
+  // useEffect(() => {
+    
+    
+  //   console.log(rectWidth);
+  // }, [rectWidth]);
+
+  // const update = () => {
+  //   console.log(widthScroll);
+  //   setWidth(rectWidth);
+  // }
+
+  // document.addEventListener('scroll', update);
 
   return (
     <div className="text-dark-blue">
@@ -100,13 +120,13 @@ function App() {
 
       <article className='flex flex-col items-center gap-12 py-8 mx-4'>
         <h3 className='font-bold text-3xl text-center'>What they’ve said</h3>
-        <div className='overflow-hidden w-full'>
-          <div className='carousel flex gap-6 text-center overflow-scroll snap-x snap-mandatory'>
+        <div className='relative scrollWrapper overflow-scroll w-full snap-x snap-mandatory'>
+          <div className='carousel flex gap-6 text-center'>
 
             <div id='1' className='relative px-8 pb-10 pt-16 mt-10 w-full bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
               <img className='absolute top-[-36px]' width={72} src={anishaAvatar} alt="Anisha's Avatar Image" />
               <h3 className='font-bold'>Anisha Li</h3>
-              <p className='text-dark-grayish-blue text-sm leading-7 w-[30ch]'>
+              <p className='text-dark-grayish-blue text-sm leading-7 min-w-[30ch]'>
                 “Manage has supercharged our team’s workflow. The ability to maintain
                 visibility on larger milestones at all times keeps everyone motivated.”
               </p>
@@ -115,7 +135,7 @@ function App() {
             <div id='2' className='relative px-8 pb-10 pt-16 mt-10 w-full bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
               <img className='absolute top-[-36px]' width={72} src={aliAvatar} alt="Ali's Avatar Image" />
               <h3 className='font-bold'>Ali Bravo</h3>
-              <p className='text-dark-grayish-blue text-sm leading-7 w-[30ch]'>
+              <p className='text-dark-grayish-blue text-sm leading-7 min-w-[30ch]'>
                 “We have been able to cancel so many other subscriptions since using
                 Manage. There is no more cross-channel confusion and everyone is much
                 more focused.”
@@ -125,7 +145,7 @@ function App() {
             <div id='3' className='relative px-8 pb-10 pt-16 mt-10 w-full bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
               <img className='absolute top-[-36px]' width={72} src={richardAvatar} alt="Richard's Avatar Image" />
               <h3 className='font-bold'>Richard Watts</h3>
-              <p className='text-dark-grayish-blue text-sm leading-7 w-[30ch]'>
+              <p className='text-dark-grayish-blue text-sm leading-7 min-w-[30ch]'>
                 “Manage allows us to provide structure and process. It keeps us organized
                 and focused. I can’t stop recommending them to everyone I talk to!”
               </p>
@@ -134,24 +154,25 @@ function App() {
             <div id='4' className='relative px-8 pb-10 pt-16 mt-10 w-full bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
               <img className='absolute top-[-36px]' width={72} src={shanaiAvatar} alt="Shanai's Avatar Image" />
               <h3 className='font-bold'>Shanai Gough</h3>
-              <p className='text-dark-grayish-blue text-sm leading-7 w-[30ch]'>
+              <p className='text-dark-grayish-blue text-sm leading-7 min-w-[30ch]'>
                 “Their software allows us to track, manage and collaborate on our projects
                 from anywhere. It keeps the whole team in-sync without being intrusive.”
               </p>
             </div>
 
           </div>
+
         </div>
-        <nav>
-          {/* <button></button>
+        {/* <nav>
           <button></button>
           <button></button>
-          <button></button> */}
+          <button></button>
+          <button></button>
           <a href="#1">1</a>
           <a href="#2">2</a>
           <a href="#3">3</a>
           <a href="#4">4</a>
-        </nav>
+        </nav> */}
         <a className='text-very-light-gray font-medium text-xs bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
       </article>
 
