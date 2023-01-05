@@ -121,7 +121,7 @@ function App() {
         </div>
       </main>
 
-      <article className='flex flex-col gap-12 py-8 mx-4'>
+      <article className='flex flex-col gap-12 py-8'>
         <h3 className='font-bold text-3xl text-center'>What they’ve said</h3>
         {/* <div className='relative scrollWrapper overflow-scroll w-full snap-x snap-mandatory'>
           <div className='carousel flex gap-6 text-center'>
@@ -168,7 +168,7 @@ function App() {
         </div> */}
         <SliderCarousel/>
 
-        <a className='text-very-light-gray self-center font-medium text-xs bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
+        <a className='text-very-light-gray self-center mt-6 sm:mt-0 font-medium text-xs bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
       </article>
       
       {/* <div>
@@ -184,8 +184,8 @@ function App() {
       </article>
 
       <footer className='bg-very-dark-blue text-very-light-gray flex flex-col items-center gap-12 py-10'>
-        <div className='flex gap-3'>
-          <input className='px-7 py-2 rounded-full placeholder:text-sm text-dark-blue' type="text" placeholder='Updates in your inbox…'/>
+        <div className='flex gap-3 justify-center'>
+          <input className='px-7 py-2 rounded-full w-4/6 placeholder:text-sm text-dark-blue' type="text" placeholder='Updates in your inbox…'/>
           <button className='rounded-full px-7 py-2 bg-bright-red text-very-light-gray text-xs font-bold'>GO</button>
         </div>
         <div className='w-full flex justify-around text-sm'>

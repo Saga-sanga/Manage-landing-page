@@ -26,7 +26,7 @@ export default function SliderCarousel() {
       //   }
       // },
       {
-        breakpoint: 600,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -35,15 +35,15 @@ export default function SliderCarousel() {
           dots: true
         }
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-          variableWidth: false
-        }
-      }
+      // {
+      //   breakpoint: 480,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1,
+      //     dots: true,
+      //     variableWidth: false
+      //   }
+      // }
     ]
   };
 
