@@ -9,41 +9,24 @@ export default function SliderCarousel() {
     // className: "slider variable-width",
     arrows: false,
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
     adaptiveHeight: true,
     variableWidth: true,
     responsive: [
-      // {
-      //   breakpoint: 1024,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     slidesToScroll: 3,
-      //     dots: false
-      //   }
-      // },
       {
         breakpoint: 640,
         settings: {
+          infinite: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
           variableWidth: false,
           dots: true
         }
-      },
-      // {
-      //   breakpoint: 480,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     slidesToScroll: 1,
-      //     dots: true,
-      //     variableWidth: false
-      //   }
-      // }
+      }
     ]
   };
 

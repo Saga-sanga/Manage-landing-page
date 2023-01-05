@@ -36,9 +36,16 @@ ul.slick-dots li {
 }
 
 .slick-slider > ul {
-  /* position: relative; */
   bottom: -45px;
 }
+
+/* .slick-track {
+  scroll-snap-type: x mandatory;
+}
+
+.slick-track > div {
+  scroll-snap-align: center;
+} */
 
 .scrollWrapper::-webkit-scrollbar {
   display: none;
