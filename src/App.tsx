@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+
+import SliderCarousel from './components/SliderCarousel'
+
 import logo from './assets/logo.svg';
 import logoDark from './assets/logo-dark.svg';
 import hamburger from './assets/icon-hamburger.svg';
@@ -118,9 +121,9 @@ function App() {
         </div>
       </main>
 
-      <article className='flex flex-col items-center gap-12 py-8 mx-4'>
+      <article className='flex flex-col gap-12 py-8 mx-4'>
         <h3 className='font-bold text-3xl text-center'>What they’ve said</h3>
-        <div className='relative scrollWrapper overflow-scroll w-full snap-x snap-mandatory'>
+        {/* <div className='relative scrollWrapper overflow-scroll w-full snap-x snap-mandatory'>
           <div className='carousel flex gap-6 text-center'>
 
             <div id='1' className='relative px-8 pb-10 pt-16 mt-10 w-full bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
@@ -162,19 +165,18 @@ function App() {
 
           </div>
 
-        </div>
-        {/* <nav>
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-          <a href="#1">1</a>
-          <a href="#2">2</a>
-          <a href="#3">3</a>
-          <a href="#4">4</a>
-        </nav> */}
-        <a className='text-very-light-gray font-medium text-xs bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
+        </div> */}
+        <SliderCarousel/>
+
+        <a className='text-very-light-gray self-center font-medium text-xs bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
       </article>
+      
+      {/* <div>
+        <h3 className='font-bold text-3xl text-center'>What they’ve said</h3>
+        <SliderCarousel/>
+        <a className='text-very-light-gray font-medium text-xs bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
+      </div> */}
+      
 
       <article className='flex flex-col gap-8 items-center content-center px-8 py-20 bg-[url(./assets/bg-simplify-section-mobile.svg)] bg-left bg-no-repeat bg-auto bg-bright-red'>
         <h1 className='text-very-light-gray text-4xl text-center font-bold leading-tight'>Simplify how your team works today.</h1>

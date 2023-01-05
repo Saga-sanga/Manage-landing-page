@@ -8,6 +8,38 @@
   }
 }
 
+.slick-slider .slick-dots > li > button:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  color: transparent;
+  border: 1px solid hsl(12, 88%, 59%);
+  opacity: 1;
+}
+
+.slick-slider .slick-dots li.slick-active button:before {
+  opacity: 1;
+  background-color: hsl(12, 88%, 59%);
+}
+
+ul.slick-dots li button {
+  width: auto;
+  height: auto;
+  padding: 2px;
+}
+
+ul.slick-dots li {
+  width: auto;
+  padding: 2px;
+  margin: 0 2px;
+}
+
+/* .slick-slider > ul {
+  position: relative;
+  bottom: 0;
+} */
+
 .scrollWrapper::-webkit-scrollbar {
   display: none;
 }
