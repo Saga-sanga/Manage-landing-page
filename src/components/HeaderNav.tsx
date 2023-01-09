@@ -7,30 +7,44 @@ import { useState } from 'react';
 export default function HeaderNav() {
   const [imgSrc, setImgSrc] = useState(hamburger);
   const [divPos, setDivPos] = useState("translate-y-[-50%]");
+  const [visibility, setVisibility] = useState("hidden");
+  // let bodyOveflow = document.body.style.overflow;
 
   function handleClick() {
-    imgSrc === hamburger ? setImgSrc(close) : setImgSrc(hamburger);
-    divPos === "translate-y-[-50%]" ? setDivPos("translate-y-[110%]") : setDivPos("translate-y-[-50%]");
+    if (imgSrc === hamburger) {
+      setImgSrc(close);
+      setDivPos("translate-y-[110%]");
+      setVisibility('');
+    } else {
+      setImgSrc(hamburger);
+      setDivPos("translate-y-[-50%]");
+      setVisibility('hidden');
+    }
+    
+    // imgSrc === hamburger ? setImgSrc(close) : setImgSrc(hamburger);
+    // divPos === "translate-y-[-50%]" ? setDivPos("translate-y-[110%]") : setDivPos("translate-y-[-50%]");
+    // visibility === 'hidden' ? setVisibility('') : setVisibility('hidden');
   }
 
   return (
     <div className='bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-cover bg-[3rem_-5rem] px-4 pb-4'>
-        <nav className='flex relative justify-between items-end px-2 py-10'>
-          <img className='w-28' src={logo} alt="Manage Logo" />
-          <div id='mobile-nav' className={`absolute left-2/4 ${divPos} ml-[-45vw] md:flex transition-transform duration-300`}>
-            <ul className='flex flex-col items-center gap-6 w-[90vw] bg-white rounded p-12 font-bold'>
-              <li>Pricing</li>
-              <li>Product</li>
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Community</li>
-            </ul>
-          </div>
+      <div className={`${visibility} fixed w-screen h-screen modal-overlay scale-110 z-20`}></div>
+      <nav className='flex relative justify-between items-end px-2 py-10 z-30'>
+        <img className='w-28' src={logo} alt="Manage Logo" />
+        <div id='mobile-nav' className={`absolute left-2/4 ${divPos} ml-[-45vw] md:flex transition-transform duration-300`}>
+          <ul className='flex flex-col items-center gap-6 w-[90vw] bg-white rounded p-12 font-bold'>
+            <li>Pricing</li>
+            <li>Product</li>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Community</li>
+          </ul>
+        </div>
 
-          <a className='hidden md:block' href="">Get Started</a>
-          <div className='md:hidden'><img src={imgSrc} alt="menu icon" height={21} onClick={handleClick} /></div>
-        </nav>
-        <img className='w-full' src={illustrationIntro} alt="charts and percentages image" />
-      </div>
+        <a className='hidden md:block' href="">Get Started</a>
+        <div className='md:hidden'><img src={imgSrc} alt="menu icon" style={{height: '1.25rem'}} onClick={handleClick} /></div>
+      </nav>
+      <img className='w-full' src={illustrationIntro} alt="charts and percentages image" />
+    </div>
   )
 }

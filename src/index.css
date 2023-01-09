@@ -39,6 +39,10 @@ ul.slick-dots li {
   bottom: -45px;
 }
 
+.modal-overlay {
+  background: linear-gradient(white 40%, black 70%);
+  opacity: 0.5;
+}
 /* .slick-track {
   scroll-snap-type: x mandatory;
 }
