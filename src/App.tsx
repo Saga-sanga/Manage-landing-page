@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
 
-import SliderCarousel from './components/SliderCarousel'
-
-import logo from './assets/logo.svg';
+import SliderCarousel from './components/SliderCarousel';
+import HeaderNav from './components/HeaderNav';
 import logoDark from './assets/logo-dark.svg';
-import hamburger from './assets/icon-hamburger.svg';
+
 import close from './assets/icon-close.svg';
 // import bgDesktop from './assets/bg-simplify-section-desktop.svg';
 // import bgMobile from './assets/bg-simplify-section-mobile.svg';
@@ -46,22 +45,7 @@ function App() {
 
   return (
     <div className="text-dark-blue">
-      <div className='bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-cover bg-[3rem_-5rem] px-4 pb-4'>
-        <nav className='flex justify-between items-center px-2 py-10'>
-          <img className='w-28' src={logo} alt="Manage Logo" />
-          <ul className='hidden md:flex'>
-            <li>Pricing</li>
-            <li>Product</li>
-            <li>About Us</li>
-            <li>Careers</li>
-            <li>Community</li>
-          </ul>
-
-          <a className='hidden md:block' href="">Get Started</a>
-          <div className='md:hidden'><a href=""><img src={hamburger} alt="menu icon" /></a></div>
-        </nav>
-        <img className='w-full' src={illustrationIntro} alt="charts and percentages image" />
-      </div>
+      <HeaderNav/>
 
       <main >
         <article className='flex flex-col items-center text-center bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-[length:85%] bg-[430%_25%] px-7 gap-24'>
