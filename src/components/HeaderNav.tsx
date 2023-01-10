@@ -8,7 +8,6 @@ export default function HeaderNav() {
   const [imgSrc, setImgSrc] = useState(hamburger);
   const [divPos, setDivPos] = useState("translate-y-[-50%]");
   const [visibility, setVisibility] = useState("hidden");
-  // let bodyOveflow = document.body.style.overflow;
 
   function handleClick() {
     if (imgSrc === hamburger) {
@@ -16,21 +15,18 @@ export default function HeaderNav() {
       setDivPos("translate-y-[110%]");
       setVisibility('');
       document.body.classList.add('overflow-hidden');
-    } else {
+    } 
+    if (imgSrc === close) {
       setImgSrc(hamburger);
       setDivPos("translate-y-[-50%]");
       setVisibility('hidden');
       document.body.classList.remove('overflow-hidden');
     }
-    
-    // imgSrc === hamburger ? setImgSrc(close) : setImgSrc(hamburger);
-    // divPos === "translate-y-[-50%]" ? setDivPos("translate-y-[110%]") : setDivPos("translate-y-[-50%]");
-    // visibility === 'hidden' ? setVisibility('') : setVisibility('hidden');
   }
 
   return (
     <div className='bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-cover bg-[3rem_-5rem] px-4 pb-4'>
-      <div className={`${visibility} fixed w-screen h-screen modal-overlay scale-110 z-20`}></div>
+      <div onClick={handleClick} className={`${visibility} fixed w-screen h-screen modal-overlay scale-110 z-20`}></div>
       <nav className='flex relative justify-between items-end px-2 py-10 z-30'>
         <img className='w-28' src={logo} alt="Manage Logo" />
         <div id='mobile-nav' className={`absolute left-2/4 ${divPos} ml-[-45vw] md:flex transition-transform duration-300`}>
