@@ -15,10 +15,12 @@ export default function HeaderNav() {
       setImgSrc(close);
       setDivPos("translate-y-[110%]");
       setVisibility('');
+      document.body.classList.add('overflow-hidden');
     } else {
       setImgSrc(hamburger);
       setDivPos("translate-y-[-50%]");
       setVisibility('hidden');
+      document.body.classList.remove('overflow-hidden');
     }
     
     // imgSrc === hamburger ? setImgSrc(close) : setImgSrc(hamburger);
@@ -42,7 +44,7 @@ export default function HeaderNav() {
         </div>
 
         <a className='hidden md:block' href="">Get Started</a>
-        <div className='md:hidden'><img src={imgSrc} alt="menu icon" style={{height: '1.25rem'}} onClick={handleClick} /></div>
+        <div className='md:hidden'><img src={imgSrc} alt="menu/close icon" style={{height: '1.25rem'}} onClick={handleClick} /></div>
       </nav>
       <img className='w-full' src={illustrationIntro} alt="charts and percentages image" />
     </div>
