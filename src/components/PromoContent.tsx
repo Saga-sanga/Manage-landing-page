@@ -2,7 +2,7 @@ import illustrationIntro from '../assets/illustration-intro.svg';
 
 export default function PromoContent() {
   return (
-    <main >
+    <main className='pt-28'>
         <article className='flex flex-col items-center text-center bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-[length:85%] bg-[430%_25%] px-7 gap-24'>
           <img className='w-full' src={illustrationIntro} alt="charts and percentages image" />
 
