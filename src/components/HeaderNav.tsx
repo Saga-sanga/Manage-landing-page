@@ -1,7 +1,6 @@
 import logo from '../assets/logo.svg';
 import hamburger from '../assets/icon-hamburger.svg';
 import close from '../assets/icon-close.svg';
-import illustrationIntro from '../assets/illustration-intro.svg';
 import { useState } from 'react';
 
 export default function HeaderNav() {
@@ -25,7 +24,7 @@ export default function HeaderNav() {
   }
 
   return (
-    <div className='bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-cover bg-[3rem_-5rem] px-4 pb-4'>
+    <div className='bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-cover bg-[3rem_-5rem] px-4'>
       <div onClick={handleClick} className={`${visibility} fixed w-screen h-screen modal-overlay scale-110 z-20`}></div>
       <nav className='flex relative justify-between items-end px-2 py-10 z-30'>
         <img className='w-28' src={logo} alt="Manage Logo" />
@@ -39,10 +38,9 @@ export default function HeaderNav() {
           </ul>
         </div>
 
-        <a className='hidden md:block' href="">Get Started</a>
-        <div className='md:hidden'><img src={imgSrc} alt="menu/close icon" style={{height: '1.25rem'}} onClick={handleClick} /></div>
+        <a className='hidden md:block text-very-light-gray font-medium text-xs mt-6 bg-bright-red px-8 py-3 rounded-full cursor-pointer' href="">Get Started</a>
+        <div className='md:hidden '><img src={imgSrc} alt="menu/close icon" style={{height: '1.25rem'}} onClick={handleClick} /></div>
       </nav>
-      <img className='w-full' src={illustrationIntro} alt="charts and percentages image" />
     </div>
   )
 }
