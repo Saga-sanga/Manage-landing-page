@@ -6,10 +6,10 @@ export default function PromoContent() {
     <main className='bg-[url(./assets/bg-tablet-pattern.svg)] bg-no-repeat bg-[length:85%] bg-[430%_25%]'>
       <section className='flex flex-col items-center pt-28'>
         <article className='flex flex-col items-center text-center gap-24 max-w-6xl'>
-          <div className='flex flex-col gap-4'>
-            <img className='w-full px-4' src={illustrationIntro} alt="charts and percentages image" />
+          <div className='flex flex-col items-center gap-4 md:flex-row-reverse'>
+            <img className='w-full px-4 md:px-0' src={illustrationIntro} alt="charts and percentages image" />
 
-            <div className='flex flex-col items-center gap-2 px-7 md:items-start md:text-left'>
+            <div className='flex flex-col items-center gap-2 px-7 md:px-0 md:items-start md:text-left'>
               <h1 className='text-4xl font-bold leading-tight'>Bring everyone together to build better products.</h1>
               <p className='text-dark-grayish-blue font-normal leading-7'>
                 Manage makes it simple for software teams to plan day-to-day
@@ -19,8 +19,8 @@ export default function PromoContent() {
             </div>
           </div>
 
-          <div>
-            <div className='flex flex-col items-center gap-4 px-7 md:text-left'>
+          <div className='flex flex-col md:flex-row'>
+            <div className='flex flex-col items-center gap-4 px-7 md:px-0 md:items-start md:text-left'>
               <h2 className='text-3xl font-bold leading-normal'>What’s different about Manage?</h2>
               <p className='text-dark-grayish-blue text-sm leading-7'>
                 Manage provides all the functionality your team needs, without
@@ -29,7 +29,7 @@ export default function PromoContent() {
               </p>
             </div>
 
-            <div className='my-12 text-sm flex flex-col gap-10 text-left'>
+            <div className='my-12 text-sm flex flex-col gap-10 text-left md:my-0'>
               <div className='ml-4'>
                 <h3 className='font-bold flex gap-4 items-center bg-very-pale-red relative z-10'>
                   <span className='before:content-[""] before:z-[-1] before:absolute before:top-0 before:left-[-2rem] before:w-12 before:h-full before:bg-white relative text-very-light-gray bg-bright-red px-6 py-2 rounded-full'>01</span>
