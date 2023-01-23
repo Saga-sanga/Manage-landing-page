@@ -36,7 +36,7 @@ export default function SliderCarousel() {
         <div id='1' className='relative px-6 pb-10 pt-16 mt-10 sm:w-[30rem] mx-4 bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
           <img className='absolute top-[-36px]' width={72} src={anishaAvatar} alt="Anisha's Avatar Image" />
           <h3 className='font-bold'>Anisha Li</h3>
-          <p className='text-dark-grayish-blue text-sm text-center leading-7'>
+          <p className='text-dark-grayish-blue text-sm md:text-base text-center leading-7'>
             “Manage has supercharged our team’s workflow. The ability to maintain
             visibility on larger milestones at all times keeps everyone motivated.”
           </p>
@@ -44,10 +44,10 @@ export default function SliderCarousel() {
       </div>
 
       <div>
-        <div id='2' className='relative px-6 pb-10 pt-16 mt-10 sm:w-[30rem] mx-4 bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
+        <div id='2' className='relative px-6 pb-10 pt-16 mt-10 sm:w-[32rem] mx-4 bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
           <img className='absolute top-[-36px]' width={72} src={aliAvatar} alt="Ali's Avatar Image" />
           <h3 className='font-bold'>Ali Bravo</h3>
-          <p className='text-dark-grayish-blue text-sm text-center leading-7'>
+          <p className='text-dark-grayish-blue text-sm md:text-base text-center leading-7'>
             “We have been able to cancel so many other subscriptions since using
             Manage. There is no more cross-channel confusion and everyone is much
             more focused.”
@@ -56,10 +56,10 @@ export default function SliderCarousel() {
       </div>
 
       <div>
-        <div id='3' className='relative px-6 pb-10 pt-16 mt-10 sm:w-[30rem] mx-4 bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
+        <div id='3' className='relative px-6 pb-10 pt-16 mt-10 sm:w-[32rem] mx-4 bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
           <img className='absolute top-[-36px]' width={72} src={richardAvatar} alt="Richard's Avatar Image" />
           <h3 className='font-bold'>Richard Watts</h3>
-          <p className='text-dark-grayish-blue text-sm text-center leading-7'>
+          <p className='text-dark-grayish-blue text-sm md:text-base text-center leading-7'>
             “Manage allows us to provide structure and process. It keeps us organized
             and focused. I can’t stop recommending them to everyone I talk to!”
           </p>
@@ -67,10 +67,10 @@ export default function SliderCarousel() {
       </div>
 
       <div>
-        <div id='4' className='relative px-6 pb-10 pt-16 mt-10 sm:w-[30rem] mx-4 bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
+        <div id='4' className='relative px-6 pb-10 pt-16 mt-10 sm:w-[32rem] mx-4 bg-very-light-gray flex flex-col gap-4 items-center snap-center'>
           <img className='absolute top-[-36px]' width={72} src={shanaiAvatar} alt="Shanai's Avatar Image" />
           <h3 className='font-bold'>Shanai Gough</h3>
-          <p className='text-dark-grayish-blue text-sm text-center leading-7'>
+          <p className='text-dark-grayish-blue text-sm md:text-base text-center leading-7'>
             “Their software allows us to track, manage and collaborate on our projects
             from anywhere. It keeps the whole team in-sync without being intrusive.”
           </p>
